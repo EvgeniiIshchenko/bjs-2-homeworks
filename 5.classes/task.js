@@ -11,15 +11,15 @@ class PrintEditionItem {
 
   fix() {
     this.state = this.state * 1.5;
+  }
+
+  set state(state) {
+    this._state = state;
     if (this.state < 0) {
       this.state = 0;
     } else if (this.state > 100) {
       this.state = 100;
     }
-  }
-
-  set state(state) {
-    this._state = state;
   }
 
   get state() {
